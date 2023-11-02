@@ -69,7 +69,6 @@ public class ManagerSingleton : MonoBehaviour
         if (isPlay)
         {
             currentScore += Time.deltaTime;
-            Debug.Log(1);
         }
     }
 
