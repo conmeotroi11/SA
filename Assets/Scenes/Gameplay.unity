@@ -15662,6 +15662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPool: {fileID: 808564043}
   distanceBetweenCoins: 1
+  numberOfCoinsToSpawn: 3
 --- !u!1 &1880968812
 GameObject:
   m_ObjectHideFlags: 0

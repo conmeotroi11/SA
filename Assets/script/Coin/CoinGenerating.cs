@@ -6,19 +6,17 @@ public class CoinGenerating : MonoBehaviour
 {
     [SerializeField] private Objectpool coinPool;
     [SerializeField] private float distanceBetweenCoins = 1f;
+    [SerializeField] private int numberOfCoinsToSpawn = 3;
 
-    public void SpawnCoin (Vector3 startPostion)
+
+    public void SpawnCoin(Vector3 startPosition)
     {
-        GameObject coin1 = coinPool.GetPooledObject();
-        coin1.transform.position = startPostion;
-        coin1.SetActive(true);
-
-        GameObject coin2 = coinPool.GetPooledObject();
-        coin2.transform.position = new Vector3(startPostion.x - distanceBetweenCoins,startPostion.y , startPostion.z);
-        coin2.SetActive(true);
-
-        GameObject coin3 = coinPool.GetPooledObject();
-        coin3.transform.position = new Vector3(startPostion.x + distanceBetweenCoins, startPostion.y, startPostion.z);
-        coin3.SetActive(true);
+        for (int i = 0; i < numberOfCoinsToSpawn; i++)
+        {
+            GameObject coin = coinPool.GetPooledObject();
+            coin.transform.position = new Vector3(startPosition.x + i * distanceBetweenCoins, startPosition.y, startPosition.z);
+            coin.SetActive(true);
+        }
     }
 }
+    

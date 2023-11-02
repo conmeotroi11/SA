@@ -38,8 +38,13 @@ public class UIManager : MonoBehaviour
         playerBuy1 = PlayerPrefs.GetInt("PlayerBuy1", 0) == 1;
 
     }
-    
-    private void OnGUI()
+
+    private void Update()
+    {
+        UpdateUI();
+    }
+    private void UpdateUI()
+
     {
         scoreUI.text = gm.PrettyScore();
         coinUI.text = gm.PrettyCoin();
