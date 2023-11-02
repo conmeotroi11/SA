@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCollider : MonoBehaviour
 {
-    public AudioSource coin;
+    [SerializeField] private AudioSource coin;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -20,11 +20,7 @@ public class PlayerCollider : MonoBehaviour
     {
         if (collision.transform.CompareTag("Coin"))
         {
-
             coin.Play();
-
         }
-
-
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CoinGenerating : MonoBehaviour
 {
-    public Objectpool coinPool;
-    public float distanceBetweenCoins;
+    [SerializeField] private Objectpool coinPool;
+    [SerializeField] private float distanceBetweenCoins = 1f;
 
     public void SpawnCoin (Vector3 startPostion)
     {

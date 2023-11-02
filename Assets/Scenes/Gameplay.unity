@@ -3092,7 +3092,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buyButton: {fileID: 1807702750}
   buyButtonText: {fileID: 275751170}
-  coinCount: 0
   buyButton1: {fileID: 33507973}
   buyButtonText1: {fileID: 357534831}
 --- !u!1 &504358850
@@ -3344,7 +3343,6 @@ MonoBehaviour:
   - {fileID: 7188841953830605030}
   - {fileID: 1985154274}
   - {fileID: 1029315230}
-  smooth: 0
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11566,11 +11564,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   jumpForce: 6
+  jumpTime: 0.4
   isGround: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  jumpTime: 0.4
   jump: {fileID: 734608549}
 --- !u!114 &1029315232
 MonoBehaviour:
@@ -14713,6 +14711,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d23a060dc1059046be2d5569fab4a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgrounds:
+  - {fileID: 204948839}
+  - {fileID: 912277619}
+  - {fileID: 138801425}
+  - {fileID: 1887327541}
+  - {fileID: 855749457}
   parallaxSpeed: 0.11
 --- !u!4 &1619128563
 Transform:
@@ -16615,11 +16619,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   jumpForce: 4
+  jumpTime: 0.4
   isGround: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  jumpTime: 0.4
   jump: {fileID: 734608549}
 --- !u!114 &1985154278
 MonoBehaviour:
@@ -17866,11 +17870,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   jumpForce: 4
+  jumpTime: 0.25
   isGround: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  jumpTime: 0.25
   jump: {fileID: 734608549}
 --- !u!1 &2177872587761031590
 GameObject:

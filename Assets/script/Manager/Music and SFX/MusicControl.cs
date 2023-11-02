@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicControl : MonoBehaviour
 {
     private AudioSource audioS;
-    public AudioClip[] songs;
+    [SerializeField] private AudioClip[] songs;
     private float musicVolume = 1f;
 
     void Start()
@@ -19,7 +19,6 @@ public class MusicControl : MonoBehaviour
         audioS.volume = musicVolume;
         if (!audioS.isPlaying)
         {
-            // Chuyển sang bài hát tiếp theo
             int nextSongIndex = (GetCurrentSongIndex() + 1) % songs.Length;
             PlaySong(nextSongIndex);
         }
@@ -27,17 +26,17 @@ public class MusicControl : MonoBehaviour
 
     void ShuffleAndPlayRandomSong()
     {
-        // Sắp xếp ngẫu nhiên danh sách các bài hát
+      
         for (int i = 0; i < songs.Length; i++)
         {
             int randomIndex = Random.Range(i, songs.Length);
-            // Hoán đổi songs[i] và songs[randomIndex]
+          
             AudioClip temp = songs[i];
             songs[i] = songs[randomIndex];
             songs[randomIndex] = temp;
         }
 
-        // Phát bài hát đầu tiên (bây giờ là một bài hát ngẫu nhiên)
+        
         PlaySong(0);
     }
 

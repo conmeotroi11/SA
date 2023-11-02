@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class GroundDestroy : GCDestroyControl
 {
-    
-  
-
 
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Objectpool : MonoBehaviour
 {
-    public GameObject pooledObject;
-    public int pooledAmount;
+    [SerializeField] private GameObject pooledObject;
+    [SerializeField] private int pooledAmount;
 
     List<GameObject> pooledObjects; 
     void Start()

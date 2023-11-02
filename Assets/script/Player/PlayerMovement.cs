@@ -4,25 +4,21 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;  
-    public float jumpForce = 10f; 
+    [SerializeField] private float moveSpeed ;
+    [SerializeField] private float jumpForce ;
+    [SerializeField] private float jumpTime;
+    private float jumpTimeCounter;
 
     private Rigidbody2D rb;
 
     public bool isGround;
-    public LayerMask whatIsGround;
+    [SerializeField] private LayerMask whatIsGround;
+   
     private Collider2D playerCollider;
 
     private Animator playerAnimator;
 
-    public float jumpTime;
-    private float jumpTimeCounter;
-
-    public AudioSource jump;
-
-   
-
-
+    [SerializeField] private AudioSource jump;
 
     void Start()
     {
@@ -53,16 +49,15 @@ public class PlayerMovement : MonoBehaviour
         
         rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
 
-        //if (Input.GetButtonDown("Jump") && isGround)
-        if (Input.GetMouseButtonDown(0) && isGround)
+        //if (Input.GetMouseButtonDown(0) && isGround)
+        if (Input.GetButtonDown("Jump") && isGround)
         {
            
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jump.Play();
         }
-        
-        //if(Input.GetButton("Jump"))
-        if (Input.GetMouseButton(0))
+        //if (Input.GetMouseButton(0)) 
+        if (Input.GetButton("Jump"))    
             {
             if(jumpTimeCounter > 0)
             {
@@ -71,8 +66,9 @@ public class PlayerMovement : MonoBehaviour
                
             }
         }
-        // if(Input.GetButtonUp("Jump"))
-        if (Input.GetMouseButtonUp(0))
+        
+        //if (Input.GetMouseButtonUp(0))
+        if(Input.GetButtonUp("Jump"))
         {
             jumpTimeCounter = 0;
             

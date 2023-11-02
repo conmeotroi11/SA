@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class ManagerSingleton : MonoBehaviour
 {
     public static ManagerSingleton instance;
-    public  GameObject destroyPoint;
+    public GameObject destroyPoint;
 
     
     public float currentScore = 0f;
@@ -63,7 +63,7 @@ public class ManagerSingleton : MonoBehaviour
         }
     }
   
-    // Update is called once per frame
+   
     void Update()
     {
         if (isPlay)

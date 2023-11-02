@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class GCGenerating : MonoBehaviour
 {
-    public GameObject groundSpawn;
-    public Transform groundSpawnPoint;
-    public Objectpool thePoolObject;
+    [SerializeField] private GameObject groundSpawn;
+    [SerializeField] private Transform groundSpawnPoint;
+    [SerializeField] private Objectpool thePoolObject;
 
-    private float groundWidth =22f; //lay do dai cua ground vao , nhung do ground qua dai nen gan san la 25
+    private float groundWidth =22f;
 
-    public float disanceBetween;
+    [SerializeField] private float disanceBetween;
     private float maxDisance = 5f;
     private float minDisance =8f;
 
@@ -22,15 +22,15 @@ public class GCGenerating : MonoBehaviour
     private float hightGround;
 
     public CoinGenerating theCoinGenerating;
-    public float randomCoinY;
+    [SerializeField] private float randomCoinY;
     private float maxY = -3f;
     private float minY = -1f;
 
-    public float randomCoinX;
+    [SerializeField] private float randomCoinX;
     private float maxX= 0f;
     private float minX = 20f;
 
-    public float RandomCoinNumber;
+    [SerializeField] private float RandomCoinNumber;
 
   
 

@@ -6,20 +6,23 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
-    public Button buyButton;   // Button mua skin
-    private float requiredCoins = 100f;  // Số coin yêu cầu để mua skin
-    public TextMeshProUGUI buyButtonText;
-    public float coinCount;
+    [SerializeField] private Button buyButton;   
+    private float requiredCoins = 100f;  
+    [SerializeField] private TextMeshProUGUI buyButtonText;
 
-    public Button buyButton1;   // Button mua skin
-    private float requiredCoins1 = 200f;  // Số coin yêu cầu để mua skin
-    public TextMeshProUGUI buyButtonText1;
+    [SerializeField] private Button buyButton1;
+    private float requiredCoins1 = 200f;
+    [SerializeField] private TextMeshProUGUI buyButtonText1;
+    
+    private float coinCount;
+
+ 
    
 
 
     private void Start()
     {
-        // Ban đầu, khóa Button Buy
+        
         buyButton.interactable = false;
         buyButtonText.text = "Lock";
 
@@ -35,7 +38,6 @@ public class ShopManager : MonoBehaviour
         CheckIfCanBuy();
     }
 
-    // Hàm này được gọi từ script khác để kiểm tra xem có đủ coin để mua skin không
     public void CheckIfCanBuy()
     {
        
@@ -48,7 +50,7 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            // Khóa Button Buy nếu không đủ coin
+          
             buyButton.interactable = false;
             buyButtonText.text = "Lock";
         }
@@ -62,7 +64,7 @@ public class ShopManager : MonoBehaviour
         }
         else
         {
-            // Khóa Button Buy nếu không đủ coin
+           
             buyButton1.interactable = false;
             buyButtonText1.text = "Lock";
         }

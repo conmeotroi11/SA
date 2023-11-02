@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class parallaxController : MonoBehaviour
 {
-    Transform cam; //main camera
-    Vector3 camStartPos; //vi tri vector cua camera
-    float distanceCam; //khoang cach giua vi tri cam ban dau va hien tai
+    private Transform cam;
+    private Vector3 camStartPos;
+    private float distanceCam;
 
-    GameObject[] backgrounds; //tao mang GO background
-    Material[] mat;
-    float[] backSpeed;
+    [SerializeField] private GameObject[] backgrounds;
+    private Material[] mat;
+    private float[] backSpeed;
 
-    float farthestBack;
+    private float farthestBack;
 
     [Range(0f,0.5f)]
-     public float parallaxSpeed;
+    [SerializeField] private float parallaxSpeed = 0.11f;
 
     void Start()
     {

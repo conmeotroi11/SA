@@ -34,12 +34,12 @@ public class UIManager : MonoBehaviour
     {
         gm = ManagerSingleton.instance;
         gm.onGameover.AddListener(GameOverPanel);
-        playerBuy = PlayerPrefs.GetInt("PlayerBuy", 0) == 1; // Đọc giá trị từ PlayerPrefs
+        playerBuy = PlayerPrefs.GetInt("PlayerBuy", 0) == 1; 
         playerBuy1 = PlayerPrefs.GetInt("PlayerBuy1", 0) == 1;
 
     }
     
-    private void OnGUI() //update nhung danh cho ui
+    private void OnGUI()
     {
         scoreUI.text = gm.PrettyScore();
         coinUI.text = gm.PrettyCoin();
@@ -106,16 +106,16 @@ public class UIManager : MonoBehaviour
     {
        
         playerBuy = true;
-        PlayerPrefs.SetInt("PlayerBuy", playerBuy ? 1 : 0); // Lưu giá trị vào PlayerPrefs
-        PlayerPrefs.Save(); // Lưu thay đổi
+        PlayerPrefs.SetInt("PlayerBuy", playerBuy ? 1 : 0); 
+        PlayerPrefs.Save(); 
     }
 
     public void BuyPlayer1()
     {
 
         playerBuy1 = true;
-        PlayerPrefs.SetInt("PlayerBuy1", playerBuy1 ? 1 : 0); // Lưu giá trị vào PlayerPrefs
-        PlayerPrefs.Save(); // Lưu thay đổi
+        PlayerPrefs.SetInt("PlayerBuy1", playerBuy1 ? 1 : 0); 
+        PlayerPrefs.Save(); 
     }
 
 
