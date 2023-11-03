@@ -6,7 +6,7 @@ Thời gian cho dự án : 2 tuần – Ngày bắt đầu 23-10-2023
 # 2.Game Design Document  
 Gameplay : Endless Run  
 Coreloop : Play – Collect Coin – Buy Skin Player   
-Game Elements : Player – Ground – Coin – Background 
+Game Elements : Player – Ground – Coin – Background  
 Game Mechanic : Tap to Jump - Random Ground  -  Random Coin – End Game Jump Fail  
 Art Style : 2D Pixel  
 
