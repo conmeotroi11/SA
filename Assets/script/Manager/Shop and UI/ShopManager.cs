@@ -48,7 +48,7 @@ public class ShopManager : MonoBehaviour
         }
         if(buySkin2)
         {
-            panelSkin2 .SetActive(false);
+            panelSkin2.SetActive(false);
         }
     }
 
