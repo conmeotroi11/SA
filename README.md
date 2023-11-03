@@ -1,7 +1,7 @@
 # 1.Game Pitch Document  
 Gameplay :  Endless Runner lấy ý tưởng từ game Canabalt và Alto Adventure  
-Mục Tiêu : Dự án đầu tiên làm ra sản phẩm hoàn chỉnh để bỏ vào cv  
-Thời gian cho dự án : 2 tuần – Ngày bắt đầu 23-10-2023  
+Mục Tiêu : Dự án đầu tiên làm ra sản phẩm đơn giản và hoàn chỉnh để bỏ vào cv  
+Thời gian cho dự án : 2 Tuần  
 
 # 2.Game Design Document  
 Gameplay : Endless Run  
