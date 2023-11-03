@@ -11,7 +11,6 @@ public class SFXcontrol : MonoBehaviour
         audioS = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         audioS.volume = musicVolume;

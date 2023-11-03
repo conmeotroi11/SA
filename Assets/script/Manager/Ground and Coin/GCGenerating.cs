@@ -32,12 +32,6 @@ public class GCGenerating : MonoBehaviour
 
     [SerializeField] private float RandomCoinNumber;
 
-  
-
-   
-
- 
-
    
     void Update()
     {

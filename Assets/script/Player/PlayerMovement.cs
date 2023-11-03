@@ -36,9 +36,6 @@ public class PlayerMovement : MonoBehaviour
 
             PlayerMove();
 
-            
-
-            
         }
         AnimatorPlayer();
 
